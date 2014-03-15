@@ -27,6 +27,7 @@
 #define DEFAULT_SND_FREQ	44100
 //#define	DEFAULT_SND_CHAN	1
 #define	DEFAULT_SND_CHAN	2
+#define DEFAULT_SND_CHUNKS	2048
 
 
 //// this is TRUE if modules were loaded properly at program startup, FALSE if not
@@ -223,7 +224,7 @@ int setaudiosystem(int active)
 	if (hasaudio)
 		return TRUE;
 
-	if (Mix_OpenAudio(DEFAULT_SND_FREQ, DEFAULT_SND_FMT, DEFAULT_SND_CHAN, 1024) < 0) {
+	if (Mix_OpenAudio(DEFAULT_SND_FREQ, DEFAULT_SND_FMT, DEFAULT_SND_CHAN, DEFAULT_SND_CHUNKS) < 0) {
 		warn("Mix_OpenAudio: %s\n", Mix_GetError());
 		music_enabled = 0;
 		return FALSE;
@@ -241,6 +242,7 @@ int setaudiosystem(int active)
 	hasaudio = TRUE;
 	return TRUE;
 }
+
 //DKS - disabled, not needed anymore
 ///* Activate or deactivate the sound system. When activating for the
 // * first time, the connection to the sound device is established. When

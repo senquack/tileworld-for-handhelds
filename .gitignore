@@ -16,3 +16,9 @@
 *.exe
 *.out
 *.app
+
+#VIM shit
+*.swp
+
+#tworld executable
+src/tworld

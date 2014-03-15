@@ -1074,7 +1074,7 @@ static int endinput(gamespec *gs, int newbesttime, int wasbesttime)
 		SFont_WriteCenter(sdlg.screen, sdlg.font_big, dstrect.y + 4, "OOPS");
 		SDL_BlitSurface(sdlg.screen, NULL, sdlg.realscreen, NULL);
 		SDL_Flip(sdlg.realscreen);
-		controlleddelay(850);
+		controlleddelay(750);
 		displaylevelselect = 0;
 		return TRUE;
 	} else if (gs->status == 0) {
@@ -1097,7 +1097,7 @@ static int endinput(gamespec *gs, int newbesttime, int wasbesttime)
 
 		SDL_BlitSurface(sdlg.screen, NULL, sdlg.realscreen, NULL);
 		SDL_Flip(sdlg.realscreen);
-		controlleddelay(1000);
+		controlleddelay(600);
 		SFont_WriteCenter(sdlg.screen, sdlg.font_tiny, 226, "Press any button");
 		SDL_BlitSurface(sdlg.screen, NULL, sdlg.realscreen, NULL);
 		SDL_Flip(sdlg.realscreen);

@@ -19,6 +19,7 @@
 
 #VIM shit
 *.swp
+*.swo
 
 #tworld executable
 src/tworld

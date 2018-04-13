@@ -1,4 +1,4 @@
 tileworld-for-handhelds
 =======================
 
-A port of Tile World to 320x240 handheld consoles including GP2X, Wiz, and GCW Zero/Dingux
+A port of Tile World to 320x480 handheld consoles RetroGame RS-97 w/CFW

@@ -14,7 +14,7 @@ LDFLAGS=
 #		-lSDL_image -lSDL_gfx -ljpeg -lpng14 -lz -lSDL_mixer -lvorbisidec -lvorbisfile -lvorbis -lSDL \
 #		 -lpthread -lgcc -lm -lc  
 #GCW (optimized)
-GPLDFLAGS=-flto -O3 -L/opt/gcw0-toolchain/usr/mipsel-gcw0-linux-uclibc/sysroot/usr/lib -Wl,-rpath,/opt/gcw0-toolchain/usr/mipsel-gcw0-linux-uclibc/sysroot/usr/lib \
+GPLDFLAGS=-flto -O3 -L/opt/gh_retrogame_buildroot/usr/mipsel-buildroot-linux-uclibc/sysroot/usr/lib -Wl,-rpath,/opt/gh_retrogame_buildroot/usr/mipsel-buildroot-linux-uclibc/sysroot/usr/lib \
 		-lSDL_image -lSDL_gfx -ljpeg -lpng14 -lz -lSDL_mixer -lvorbisidec -lvorbisfile -lvorbis -lSDL \
 		 -lpthread -lgcc -lm -lc  
 
@@ -32,9 +32,9 @@ OBJECTS=$(SOURCES:.c=.o)
 EXECUTABLEPC=tworld
 EXECUTABLEGP=tworld
 
-CC=/opt/gcw0-toolchain/usr/bin/mipsel-gcw0-linux-uclibc-gcc
-CFLAGS+=-I/opt/gcw0-toolchain/usr/mipsel-gcw0-linux-uclibc/sysroot/usr/include \
-		-I/opt/gcw0-toolchain/usr/mipsel-gcw0-linux-uclibc/sysroot/usr/include/SDL \
+CC=/opt/gh_retrogame_buildroot/usr/bin/mipsel-buildroot-linux-uclibc-gcc
+CFLAGS+=-I/opt/gh_retrogame_buildroot/usr/mipsel-buildroot-linux-uclibc/sysroot/usr/include \
+		-I/opt/gh_retrogame_buildroot/usr/mipsel-buildroot-linux-uclibc/sysroot/usr/include/SDL \
 		-D_REENTRANT \
 		-DPLATFORM_GCW
 

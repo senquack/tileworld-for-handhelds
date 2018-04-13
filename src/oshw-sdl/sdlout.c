@@ -85,7 +85,7 @@ static int		fullscreen = TRUE;
  */
 //DKS - modified to constants
 static const int	screenw = 320;
-static const int    screenh = 240;
+static const int    screenh = 480;
 //DKS - new
 static const int    screenbpp = 32;
 
@@ -287,12 +287,12 @@ static int createdisplay(void)
 	flags = SDL_SWSURFACE | SDL_ANYFORMAT;
 #elif PLATFORM_GCW
 	//    flags = SDL_SWSURFACE;
-	flags = SDL_HWSURFACE | SDL_DOUBLEBUF;
+	flags = SDL_HWSURFACE;
 #else
 	flags = SDL_HWSURFACE | SDL_DOUBLEBUF | SDL_FULLSCREEN;
 #endif
 
-	sdlg.realscreen = SDL_SetVideoMode(320, 240, 32, flags);
+	sdlg.realscreen = SDL_SetVideoMode(320, 480, 32, flags);
 
 	sync();
 
